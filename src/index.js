@@ -1,10 +1,13 @@
-var person = {
-    name: "young",
-    age: 25,
-    gender: "man"
-};
-var introME = function (person) {
-    return "name:" + person.name + " age:" + person.age + " gender:" + person.gender;
-};
-console.log(introME(person));
-console.log("hi!");
+var Block = /** @class */ (function () {
+    function Block(index, hash, previousHash, data, timestamp) {
+        this.index = index;
+        this.hash = hash;
+        this.previousHash = previousHash;
+        this.data = data;
+        this.timestamp = timestamp;
+    }
+    return Block;
+}());
+var genesisBlock = new Block(0, "12313", "", "hello", 123);
+var blockchain = [genesisBlock];
+console.log(blockchain);
